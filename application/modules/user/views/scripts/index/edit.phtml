@@ -1,0 +1,20 @@
+<?php $user = $this->user; ?>
+<form class="ajax-form"  action="<?php echo BASE_URL . "/user/index/edit" ?>" method="post">
+    Username: <input type="text" value="<?php echo $user['username'] ?>" name="username" /><br/>
+    Password: <input type="text" value="<?php echo $user['password'] ?>" name="password"/><br/>
+    <input type="submit" id="close" value="Edit"/>
+    <input type="hidden" value="<?php echo $user['ID'] ?>" name="ID"/>
+    <a href="#"id="demo">Click me</a>
+</form>
+
+<script type="text/javascript">
+    (function($){
+        $(document).ready(function(){
+            $('#close').live("click", function(){
+                $( "#dialog-modal" ).dialog('close')
+            });
+            
+            
+        })
+    })(jQuery);
+</script>

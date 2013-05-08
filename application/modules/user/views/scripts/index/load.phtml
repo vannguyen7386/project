@@ -1,0 +1,19 @@
+<h3>This is Ajax Page load</h3>
+<form id="frmAdd" action="<?php echo BASE_URL . "/user/index/add"?>" method="post">
+    Username: <input type="text" value="" name="username" /><br/>
+    Password: <input type="text" value="" name="password"/><br/>
+    <button id="close">Add</button>
+</form>
+
+
+<script type="text/javascript">
+    (function($){
+        $(document).ready(function(){
+            $('#close').live("click", function(){
+                $( "#dialog-modal" ).dialog('close')
+                alert('dsa');
+                $('#frmAdd').submit();
+            })
+        })
+    })(jQuery);
+</script>
